@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		07C165272997C50C002B399B /* CineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165262997C50C002B399B /* CineApp.swift */; };
-		07C165292997C50D002B399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* ContentView.swift */; };
+		07C165292997C50D002B399B /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* MovieListView.swift */; };
 		07C1652B2997C50E002B399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652A2997C50E002B399B /* Assets.xcassets */; };
 		07C1652F2997C50E002B399B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652E2997C50E002B399B /* Preview Assets.xcassets */; };
 		07C165392997C50E002B399B /* CineAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165382997C50E002B399B /* CineAppTests.swift */; };
 		07C165432997C50E002B399B /* CineAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165422997C50E002B399B /* CineAppUITests.swift */; };
 		07C165452997C50E002B399B /* CineAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */; };
+		07C1655E2997CAF8002B399B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655D2997CAF8002B399B /* DataManager.swift */; };
+		07C165602997CB0B002B399B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655F2997CB0B002B399B /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		07C165232997C50C002B399B /* CineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165262997C50C002B399B /* CineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineApp.swift; sourceTree = "<group>"; };
-		07C165282997C50D002B399B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07C165282997C50D002B399B /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		07C1652A2997C50E002B399B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C1652C2997C50E002B399B /* CineApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CineApp.entitlements; sourceTree = "<group>"; };
 		07C1652E2997C50E002B399B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		07C1653E2997C50E002B399B /* CineAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165422997C50E002B399B /* CineAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppUITests.swift; sourceTree = "<group>"; };
 		07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07C1655D2997CAF8002B399B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		07C1655F2997CB0B002B399B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				07C165542997C805002B399B /* Scenes */,
-				07C165532997C7D7002B399B /* Models */,
-				07C165522997C7A1002B399B /* Network */,
+				07C1655B2997CADC002B399B /* Models */,
+				07C1655C2997CAE6002B399B /* Network */,
 				07C165512997C797002B399B /* Support */,
 			);
 			path = CineApp;
@@ -139,26 +143,28 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		07C165522997C7A1002B399B /* Network */ = {
+		07C165542997C805002B399B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				07C165282997C50D002B399B /* MovieListView.swift */,
 			);
-			path = Network;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
-		07C165532997C7D7002B399B /* Models */ = {
+		07C1655B2997CADC002B399B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				07C1655F2997CB0B002B399B /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		07C165542997C805002B399B /* Scenes */ = {
+		07C1655C2997CAE6002B399B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				07C165282997C50D002B399B /* ContentView.swift */,
+				07C1655D2997CAF8002B399B /* DataManager.swift */,
 			);
-			path = Scenes;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +183,8 @@
 			dependencies = (
 			);
 			name = CineApp;
+			packageProductDependencies = (
+			);
 			productName = CineApp;
 			productReference = 07C165232997C50C002B399B /* CineApp.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +257,8 @@
 				Base,
 			);
 			mainGroup = 07C1651A2997C50C002B399B;
+			packageReferences = (
+			);
 			productRefGroup = 07C165242997C50C002B399B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,7 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C165292997C50D002B399B /* ContentView.swift in Sources */,
+				07C165292997C50D002B399B /* MovieListView.swift in Sources */,
+				07C1655E2997CAF8002B399B /* DataManager.swift in Sources */,
+				07C165602997CB0B002B399B /* Movie.swift in Sources */,
 				07C165272997C50C002B399B /* CineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
