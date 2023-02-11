@@ -95,11 +95,10 @@
 		07C165252997C50C002B399B /* CineApp */ = {
 			isa = PBXGroup;
 			children = (
-				07C165262997C50C002B399B /* CineApp.swift */,
-				07C165282997C50D002B399B /* ContentView.swift */,
-				07C1652A2997C50E002B399B /* Assets.xcassets */,
-				07C1652C2997C50E002B399B /* CineApp.entitlements */,
-				07C1652D2997C50E002B399B /* Preview Content */,
+				07C165542997C805002B399B /* Scenes */,
+				07C165532997C7D7002B399B /* Models */,
+				07C165522997C7A1002B399B /* Network */,
+				07C165512997C797002B399B /* Support */,
 			);
 			path = CineApp;
 			sourceTree = "<group>";
@@ -127,6 +126,39 @@
 				07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */,
 			);
 			path = CineAppUITests;
+			sourceTree = "<group>";
+		};
+		07C165512997C797002B399B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				07C165262997C50C002B399B /* CineApp.swift */,
+				07C1652A2997C50E002B399B /* Assets.xcassets */,
+				07C1652C2997C50E002B399B /* CineApp.entitlements */,
+				07C1652D2997C50E002B399B /* Preview Content */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		07C165522997C7A1002B399B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		07C165532997C7D7002B399B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07C165542997C805002B399B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				07C165282997C50D002B399B /* ContentView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,10 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CineApp/CineApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CineApp/Support/CineApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -447,10 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CineApp/CineApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CineApp/Support/CineApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
