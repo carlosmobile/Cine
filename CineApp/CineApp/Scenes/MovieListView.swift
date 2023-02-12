@@ -16,10 +16,21 @@ struct MovieListView: View {
     var body: some View {
         VStack() {
             Text(viewModel.title).padding([.top, .bottom], standardMargin)
+            TagView().environmentObject(viewModel)
+                .frame(width: UIScreen.screenWidth - 16, alignment: .leading)
+                .padding(.bottom, 10)
             ScrollView {
                 LazyVGrid(columns: viewModel.columnsGrid, spacing: 0) {
                     ForEach(viewModel.movies) { movie in
-
+                        MultiImageItem(urlImage: movie.moviePictures["poster"] ?? "",
+                                       fullItemCallback: {
+                            //
+                        },
+                                       infoButtonCallback: {
+                            //
+                            
+                        })
+                        
                     }
                 }
                 .frame(width: UIScreen.screenWidth - standardMargin, alignment: .leading)
