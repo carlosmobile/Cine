@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0763A24129990E7600B4AF42 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A24029990E7600B4AF42 /* UIScreen.swift */; };
+		0763A24429990EC100B4AF42 /* TargetDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A24329990EC100B4AF42 /* TargetDevice.swift */; };
 		07C165272997C50C002B399B /* CineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165262997C50C002B399B /* CineApp.swift */; };
 		07C165292997C50D002B399B /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* MovieListView.swift */; };
 		07C1652B2997C50E002B399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652A2997C50E002B399B /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0763A24029990E7600B4AF42 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		0763A24329990EC100B4AF42 /* TargetDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDevice.swift; sourceTree = "<group>"; };
 		07C165232997C50C002B399B /* CineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165262997C50C002B399B /* CineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineApp.swift; sourceTree = "<group>"; };
 		07C165282997C50D002B399B /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		0763A24229990EB400B4AF42 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0763A24329990EC100B4AF42 /* TargetDevice.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		07C1651A2997C50C002B399B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 				07C1655B2997CADC002B399B /* Models */,
 				07C1655C2997CAE6002B399B /* Network */,
 				0763A23E29990E4200B4AF42 /* Extension */,
+				0763A24229990EB400B4AF42 /* Tools */,
 				07C165512997C797002B399B /* Support */,
 			);
 			path = CineApp;
@@ -322,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C165292997C50D002B399B /* MovieListView.swift in Sources */,
+				0763A24429990EC100B4AF42 /* TargetDevice.swift in Sources */,
 				0763A24129990E7600B4AF42 /* UIScreen.swift in Sources */,
 				07C1655E2997CAF8002B399B /* DataManager.swift in Sources */,
 				07C165602997CB0B002B399B /* Movie.swift in Sources */,
