@@ -14,7 +14,7 @@ struct ShowsByGenre: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         totalCount = try container.decode(Int.self, forKey: .totalCount)
         genre = try container.decode(String.self, forKey: .genre)
-        movies = try container.decodeIfPresent([Movie].self, forKey: .movies) ?? []
+        movies = try container.decode([Movie].self, forKey: .movies)
     }
     
     enum CodingKeys: String, CodingKey {

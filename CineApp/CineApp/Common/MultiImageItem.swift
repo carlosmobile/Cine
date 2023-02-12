@@ -62,7 +62,7 @@ struct MultiImageItem: View {
         var offset: CGFloat = 0
         var widthSize: CGFloat = 0
         
-        if TargetDevice.currentDevice == .iPad {
+        if TargetDevice.currentDevice() == .iPad {
             offset = lateralMargins + insideEdgesiPad
             widthSize = (UIScreen.screenWidth - offset) / 5
         } else {

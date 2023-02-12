@@ -14,21 +14,38 @@ public enum TargetDevice {
     case iPhone
     case iWatch
     
-    public static var currentDevice: Self {
-        var currentDeviceModel = UIDevice.current.model
+    public static func currentDevice(_ mockDeviceToTests: String? = "") -> Self {
+
+        var currentDeviceModel: String {
+            get {
+                return _currentDeviceModel
+            }
+            set {
+                if let mockDevice = mockDeviceToTests, mockDevice.isEmpty {
+                    _currentDeviceModel = UIDevice.current.model
+                }
+                if let mockDevice = mockDeviceToTests, !mockDevice.isEmpty {
+                    _currentDeviceModel = mockDevice
+                }
+            }
+        }
+        
+        var _currentDeviceModel = ""
+        currentDeviceModel = ""
+        
         #if targetEnvironment(macCatalyst)
         currentDeviceModel = "nativeMac"
         #elseif os(watchOS)
         currentDeviceModel = "watchOS"
         #endif
         
-        if currentDeviceModel.starts(with: "iPhone") {
+        if _currentDeviceModel.starts(with: "iPhone") {
             return .iPhone
         }
-        if currentDeviceModel.starts(with: "iPad") {
+        if _currentDeviceModel.starts(with: "iPad") {
             return .iPad
         }
-        if currentDeviceModel.starts(with: "watchOS") {
+        if _currentDeviceModel.starts(with: "watchOS") {
             return .iWatch
         }
         return .nativeMac
