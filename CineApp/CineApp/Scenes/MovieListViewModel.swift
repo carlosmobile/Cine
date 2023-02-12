@@ -9,6 +9,7 @@ import SwiftUI
 
 public class MovieListViewModel: ObservableObject {
     
+    @Published var tags: [TagViewItem] = []
     var movies: [Movie] = []
     
     let title = "Cine App"
@@ -20,6 +21,7 @@ public class MovieListViewModel: ObservableObject {
     init() {
         getDataModel()
         setGridColumns()
+        configureTags()
     }
     
     private func getDataModel() {
@@ -36,5 +38,12 @@ public class MovieListViewModel: ObservableObject {
         for _ in 1...numberOfColumns {
             columnsGrid.append(GridItem(.flexible()))
         }
+    }
+    
+    private func configureTags() {
+        tags = [TagViewItem(title: Movies.AllMovies.description, isSelected: true),
+                TagViewItem(title: Movies.European.description, isSelected: false),
+                TagViewItem(title: Movies.ByDates.description, isSelected: false),
+                TagViewItem(title: Movies.Directors.description, isSelected: false)]
     }
 }
