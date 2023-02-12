@@ -17,6 +17,7 @@
 		07C1655E2997CAF8002B399B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655D2997CAF8002B399B /* DataManager.swift */; };
 		07C165602997CB0B002B399B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655F2997CB0B002B399B /* Movie.swift */; };
 		07C165662997CD4C002B399B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 07C165652997CD4C002B399B /* Kingfisher */; };
+		07C165682997CDAB002B399B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165672997CDAB002B399B /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		07C1655D2997CAF8002B399B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		07C1655F2997CB0B002B399B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		07C165672997CDAB002B399B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07C16575299818C2002B399B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +140,11 @@
 		07C165512997C797002B399B /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				07C165672997CDAB002B399B /* AppDelegate.swift */,
 				07C165262997C50C002B399B /* CineApp.swift */,
 				07C1652A2997C50E002B399B /* Assets.xcassets */,
 				07C1652C2997C50E002B399B /* CineApp.entitlements */,
+				07C16575299818C2002B399B /* Info.plist */,
 				07C1652D2997C50E002B399B /* Preview Content */,
 			);
 			path = Support;
@@ -308,6 +313,7 @@
 				07C165292997C50D002B399B /* MovieListView.swift in Sources */,
 				07C1655E2997CAF8002B399B /* DataManager.swift in Sources */,
 				07C165602997CB0B002B399B /* Movie.swift in Sources */,
+				07C165682997CDAB002B399B /* AppDelegate.swift in Sources */,
 				07C165272997C50C002B399B /* CineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +471,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CineApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -483,7 +490,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,6 +510,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CineApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -519,7 +529,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
