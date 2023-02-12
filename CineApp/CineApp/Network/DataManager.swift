@@ -18,7 +18,7 @@ class DataManager: ObservableObject  {
         loadData()
     }
     
-    func loadData() {
+    private func loadData() {
         guard let url = Bundle.main.url(forResource: "last7d.cine", withExtension: "json")
             else {
                 print("json file not found")

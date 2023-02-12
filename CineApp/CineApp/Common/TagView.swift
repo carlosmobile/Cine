@@ -18,6 +18,11 @@ enum Movies: String {
     }
 }
 
+struct TagViewItem {
+    var title: String
+    var isSelected: Bool
+}
+
 struct TagView: View {
     
     @EnvironmentObject var movieListViewModel: MovieListViewModel

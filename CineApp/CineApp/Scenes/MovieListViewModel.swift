@@ -10,13 +10,12 @@ import SwiftUI
 public class MovieListViewModel: ObservableObject {
     
     @Published var tags: [TagViewItem] = []
-    var movies: [Movie] = []
     
+    var movies: [Movie] = []
+    var columnsGrid: [GridItem] = []
     let title = "Cine App"
     let iPhoneColumns = 3
     let iPadColumns = 5
-    
-    var columnsGrid: [GridItem] = []
     
     init() {
         getDataModel()
@@ -31,7 +30,7 @@ public class MovieListViewModel: ObservableObject {
     
     private func setGridColumns() {
         var numberOfColumns = iPhoneColumns
-        if TargetDevice.currentDevice == .iPad {
+        if TargetDevice.currentDevice() == .iPad {
             numberOfColumns = iPadColumns
         }
         

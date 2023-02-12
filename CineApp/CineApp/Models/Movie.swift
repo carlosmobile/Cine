@@ -31,7 +31,7 @@ struct Movie: Identifiable, Codable {
         writers = try container.decode([String].self, forKey: .writers)
         categories = try container.decode([String].self, forKey: .categories)
         year = try container.decode(Int.self, forKey: .year)
-        score = try container.decodeIfPresent(Double.self, forKey: .score) ?? -1
+        score = try container.decode(Double.self, forKey: .score)
         synopsis = try container.decode(String.self, forKey: .synopsis)
         moviePictures = try container.decode([String: String].self, forKey: .moviePictures)
         length = try container.decode(Int.self, forKey: .length)
