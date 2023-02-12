@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0763A24129990E7600B4AF42 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A24029990E7600B4AF42 /* UIScreen.swift */; };
+		0763A24429990EC100B4AF42 /* TargetDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A24329990EC100B4AF42 /* TargetDevice.swift */; };
 		07C165272997C50C002B399B /* CineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165262997C50C002B399B /* CineApp.swift */; };
-		07C165292997C50D002B399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* ContentView.swift */; };
+		07C165292997C50D002B399B /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* MovieListView.swift */; };
 		07C1652B2997C50E002B399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652A2997C50E002B399B /* Assets.xcassets */; };
 		07C1652F2997C50E002B399B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652E2997C50E002B399B /* Preview Assets.xcassets */; };
 		07C165392997C50E002B399B /* CineAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165382997C50E002B399B /* CineAppTests.swift */; };
 		07C165432997C50E002B399B /* CineAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165422997C50E002B399B /* CineAppUITests.swift */; };
 		07C165452997C50E002B399B /* CineAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */; };
+		07C1655E2997CAF8002B399B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655D2997CAF8002B399B /* DataManager.swift */; };
+		07C165602997CB0B002B399B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1655F2997CB0B002B399B /* Movie.swift */; };
+		07C165662997CD4C002B399B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 07C165652997CD4C002B399B /* Kingfisher */; };
+		07C165682997CDAB002B399B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165672997CDAB002B399B /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0763A24029990E7600B4AF42 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		0763A24329990EC100B4AF42 /* TargetDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDevice.swift; sourceTree = "<group>"; };
 		07C165232997C50C002B399B /* CineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165262997C50C002B399B /* CineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineApp.swift; sourceTree = "<group>"; };
-		07C165282997C50D002B399B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07C165282997C50D002B399B /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		07C1652A2997C50E002B399B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C1652C2997C50E002B399B /* CineApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CineApp.entitlements; sourceTree = "<group>"; };
 		07C1652E2997C50E002B399B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +53,10 @@
 		07C1653E2997C50E002B399B /* CineAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165422997C50E002B399B /* CineAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppUITests.swift; sourceTree = "<group>"; };
 		07C165442997C50E002B399B /* CineAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07C1655D2997CAF8002B399B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		07C1655F2997CB0B002B399B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		07C165672997CDAB002B399B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07C16575299818C2002B399B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C165662997CD4C002B399B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0763A23E29990E4200B4AF42 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0763A24029990E7600B4AF42 /* UIScreen.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0763A24229990EB400B4AF42 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0763A24329990EC100B4AF42 /* TargetDevice.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		07C1651A2997C50C002B399B = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +124,12 @@
 		07C165252997C50C002B399B /* CineApp */ = {
 			isa = PBXGroup;
 			children = (
-				07C165262997C50C002B399B /* CineApp.swift */,
-				07C165282997C50D002B399B /* ContentView.swift */,
-				07C1652A2997C50E002B399B /* Assets.xcassets */,
-				07C1652C2997C50E002B399B /* CineApp.entitlements */,
-				07C1652D2997C50E002B399B /* Preview Content */,
+				07C165542997C805002B399B /* Scenes */,
+				07C1655B2997CADC002B399B /* Models */,
+				07C1655C2997CAE6002B399B /* Network */,
+				0763A23E29990E4200B4AF42 /* Extension */,
+				0763A24229990EB400B4AF42 /* Tools */,
+				07C165512997C797002B399B /* Support */,
 			);
 			path = CineApp;
 			sourceTree = "<group>";
@@ -129,6 +159,43 @@
 			path = CineAppUITests;
 			sourceTree = "<group>";
 		};
+		07C165512997C797002B399B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				07C165672997CDAB002B399B /* AppDelegate.swift */,
+				07C165262997C50C002B399B /* CineApp.swift */,
+				07C1652A2997C50E002B399B /* Assets.xcassets */,
+				07C1652C2997C50E002B399B /* CineApp.entitlements */,
+				07C16575299818C2002B399B /* Info.plist */,
+				07C1652D2997C50E002B399B /* Preview Content */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		07C165542997C805002B399B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				07C165282997C50D002B399B /* MovieListView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		07C1655B2997CADC002B399B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07C1655F2997CB0B002B399B /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07C1655C2997CAE6002B399B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				07C1655D2997CAF8002B399B /* DataManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +212,9 @@
 			dependencies = (
 			);
 			name = CineApp;
+			packageProductDependencies = (
+				07C165652997CD4C002B399B /* Kingfisher */,
+			);
 			productName = CineApp;
 			productReference = 07C165232997C50C002B399B /* CineApp.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +287,9 @@
 				Base,
 			);
 			mainGroup = 07C1651A2997C50C002B399B;
+			packageReferences = (
+				07C165642997CD4C002B399B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 07C165242997C50C002B399B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C165292997C50D002B399B /* ContentView.swift in Sources */,
+				07C165292997C50D002B399B /* MovieListView.swift in Sources */,
+				0763A24429990EC100B4AF42 /* TargetDevice.swift in Sources */,
+				0763A24129990E7600B4AF42 /* UIScreen.swift in Sources */,
+				07C1655E2997CAF8002B399B /* DataManager.swift in Sources */,
+				07C165602997CB0B002B399B /* Movie.swift in Sources */,
+				07C165682997CDAB002B399B /* AppDelegate.swift in Sources */,
 				07C165272997C50C002B399B /* CineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,12 +489,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CineApp/CineApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CineApp/Support/CineApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CineApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -435,7 +514,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,12 +528,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CineApp/CineApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CineApp/Support/CineApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CineApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -471,7 +553,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07C165642997CD4C002B399B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07C165652997CD4C002B399B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07C165642997CD4C002B399B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07C1651B2997C50C002B399B /* Project object */;
 }
