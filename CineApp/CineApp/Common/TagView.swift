@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-enum Movies: String {
-    case AllMovies = "A-Z"
-    case European = "Cine europeo"
-    case ByDates = "Por décadas"
-    case Directors = "Directores"
-
-    var description: String {
-        return self.rawValue
-    }
-}
-
-struct TagViewItem {
-    var title: String
-    var isSelected: Bool
-}
-
 struct TagView: View {
     
     @EnvironmentObject var movieListViewModel: MovieListViewModel
