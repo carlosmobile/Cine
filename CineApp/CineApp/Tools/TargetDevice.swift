@@ -16,11 +16,8 @@ public enum TargetDevice {
     
     public static func currentDevice(_ mockDeviceToTests: String? = "") -> Self {
 
-        var currentDeviceModel: String {
-            get {
-                return _currentDeviceModel
-            }
-            set {
+        var currentDeviceModel: String = "" {
+            didSet {
                 if let mockDevice = mockDeviceToTests, mockDevice.isEmpty {
                     _currentDeviceModel = UIDevice.current.model
                 }

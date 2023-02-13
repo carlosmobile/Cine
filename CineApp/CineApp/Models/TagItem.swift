@@ -11,7 +11,7 @@ struct TagItem: Equatable {
     var filter: TagMoviesFilterBy
 }
 
-enum TagMoviesFilterBy: String {
+enum TagMoviesFilterBy: String, CaseIterable {
     case AllMovies = "A-Z"
     case European = "Europeo"
     case EEUU = "Estados Unidos"
