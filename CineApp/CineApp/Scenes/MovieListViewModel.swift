@@ -9,17 +9,13 @@ import SwiftUI
 
 public class MovieListViewModel: ObservableObject {
     
-    @Published var tags: [TagViewItem] = []
+    @Published var tags: [TagItem] = []
     
     var movies: [Movie] = []
-    var columnsGrid: [GridItem] = []
     let title = "Cine App"
-    let iPhoneColumns = 3
-    let iPadColumns = 5
     
     init() {
         getDataModel()
-        setGridColumns()
         configureTags()
     }
     
@@ -28,21 +24,23 @@ public class MovieListViewModel: ObservableObject {
         movies = data.getAllMoviesFromShowsByGenre()
     }
     
-    private func setGridColumns() {
-        var numberOfColumns = iPhoneColumns
-        if TargetDevice.currentDevice() == .iPad {
-            numberOfColumns = iPadColumns
-        }
-        
-        for _ in 1...numberOfColumns {
-            columnsGrid.append(GridItem(.flexible()))
-        }
+    private func configureTags() {
+        tags = [TagItem(title: TagMoviesFilterBy.AllMovies.title, isSelected: true, filter: .AllMovies),
+                TagItem(title: TagMoviesFilterBy.Spain.title, isSelected: false, filter: .Spain),
+                TagItem(title: TagMoviesFilterBy.European.title, isSelected: false, filter: .European),
+                TagItem(title: TagMoviesFilterBy.American.title, isSelected: false, filter: .American),
+                TagItem(title: TagMoviesFilterBy.EEUU.title, isSelected: false, filter: .EEUU),
+                TagItem(title: TagMoviesFilterBy.Asian.title, isSelected: false, filter: .Asian),
+                TagItem(title: TagMoviesFilterBy.Australian.title, isSelected: false, filter: .Australian)]
     }
     
-    private func configureTags() {
-        tags = [TagViewItem(title: Movies.AllMovies.description, isSelected: true),
-                TagViewItem(title: Movies.European.description, isSelected: false),
-                TagViewItem(title: Movies.ByDates.description, isSelected: false),
-                TagViewItem(title: Movies.Directors.description, isSelected: false)]
+    func getSelectedTag() -> TagMoviesFilterBy {
+        var selectedTagTitle: TagMoviesFilterBy = .AllMovies
+        for tagItem in tags {
+            if tagItem.isSelected {
+                selectedTagTitle = tagItem.filter
+            }
+        }
+        return selectedTagTitle
     }
 }

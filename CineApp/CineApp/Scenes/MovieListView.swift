@@ -18,26 +18,13 @@ struct MovieListView: View {
             TagView().environmentObject(viewModel)
                 .frame(width: UIScreen.screenWidth - 16, alignment: .leading)
                 .padding(.bottom, 10)
-            ScrollView {
-                LazyVGrid(columns: viewModel.columnsGrid, spacing: 0) {
-                    ForEach(viewModel.movies) { movie in
-                        MultiImageItem(urlImage: movie.moviePictures["poster"] ?? "",
-                                       fullItemCallback: {
-                            //
-                        },
-                                       infoButtonCallback: {
-                            //
-                        })
-                    }
-                }
-                .frame(width: UIScreen.screenWidth - standardMargin, alignment: .leading)
-            }
+            getTagTypeView(tagType: viewModel.getSelectedTag(), viewModel: viewModel)
         }
         .padding(.top, 0)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
         MovieListView()
     }
