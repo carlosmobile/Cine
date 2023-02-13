@@ -13,16 +13,26 @@ class TestViewModels: XCTestCase {
     func testMovieListViewModel() throws {
         let movieListViewModel = MovieListViewModel()
         
-        let columnsGrid = movieListViewModel.columnsGrid
         let title = movieListViewModel.title
         let tags = movieListViewModel.tags
-        let iPadColumns = movieListViewModel.iPadColumns
-        let iPhoneColumns = movieListViewModel.iPhoneColumns
-        
-        XCTAssertEqual(columnsGrid.count > 0, true)
+
         XCTAssertEqual(tags.count > 0, true)
         XCTAssertNotNil(title)
-        XCTAssertEqual(iPadColumns, 5)
-        XCTAssertEqual(iPhoneColumns, 3)
+    }
+    
+    func testGroupedMoviesViewModel() throws {
+        let groupedMoviesViewModel = GroupedMoviesViewModel()
+        
+        var movies: [Movie] = []
+        let data = DataManager()
+        movies = data.getAllMoviesFromShowsByGenre()
+        
+        groupedMoviesViewModel.movies = movies
+        
+        groupedMoviesViewModel.groupMoviesBy(filter: .AllMovies)
+        groupedMoviesViewModel.groupMoviesBy(filter: .European)
+        
+        XCTAssertEqual(groupedMoviesViewModel.movies.count > 0, true)
+        XCTAssertEqual(groupedMoviesViewModel.groupMovies.count > 0, true)
     }
 }

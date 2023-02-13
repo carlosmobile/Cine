@@ -36,6 +36,11 @@ class DataManager: ObservableObject  {
             movies += showsByGenre.movies
         }
         
-        return movies
+        let filterEmptyPoster = movies.filter({$0.moviePictures["poster"] != ""})
+        let filterNilPoster = filterEmptyPoster.filter({$0.moviePictures["poster"] != nil})
+        let filterEmptyCountry = filterNilPoster.filter({$0.country.first != ""})
+        let filterNilCountry = filterEmptyCountry.filter({$0.country.first != nil})
+                
+        return filterNilCountry
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct MultiImageItem: View {
+struct MultiImageItemView: View {
     // MARK: - Properties
     @State var urlImage: String = ""
     @State private var isChecked = false

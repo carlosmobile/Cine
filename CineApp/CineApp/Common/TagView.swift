@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-enum Movies: String {
-    case AllMovies = "A-Z"
-    case European = "Cine europeo"
-    case ByDates = "Por décadas"
-    case Directors = "Directores"
-
-    var description: String {
-        return self.rawValue
-    }
-}
-
-struct TagViewItem {
-    var title: String
-    var isSelected: Bool
-}
-
 struct TagView: View {
     
     @EnvironmentObject var movieListViewModel: MovieListViewModel
@@ -44,6 +28,7 @@ struct TagView: View {
         return ZStack(alignment: .topLeading) {
             ForEach(0..<movieListViewModel.tags.count, id: \.self) { index in
                 item(for: movieListViewModel.tags[index].title, isSelected: movieListViewModel.tags[index].isSelected)
+                    .accessibilityIdentifier("tagButton")
                     .padding([.horizontal, .vertical], 4)
                     .alignmentGuide(.leading, computeValue: { d in
                         if (abs(width - d.width) > g.size.width) {
