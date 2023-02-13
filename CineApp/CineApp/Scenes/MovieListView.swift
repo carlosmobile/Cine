@@ -11,6 +11,7 @@ struct MovieListView: View {
     
     @StateObject private var viewModel = MovieListViewModel()
     private let standardMargin: CGFloat = 16
+    private let tagType = TagType()
     
     var body: some View {
         VStack() {
@@ -18,7 +19,7 @@ struct MovieListView: View {
             TagView().environmentObject(viewModel)
                 .frame(width: UIScreen.screenWidth - 16, alignment: .leading)
                 .padding(.bottom, 10)
-            getTagTypeView(tagType: viewModel.getSelectedTag(), viewModel: viewModel)
+            tagType.getTagTypeView(tagType: viewModel.getSelectedTag(), viewModel: viewModel)
         }
         .padding(.top, 0)
     }
