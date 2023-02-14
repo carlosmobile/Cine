@@ -20,7 +20,7 @@ struct MovieDetailView: View {
                 Spacer()
                 CloseButtonView(action: {
                     movieListViewModel.isShowMovieDetailView = false
-                }, tintColor: .gray).accessibilityIdentifier("closeDetailButton")
+                }, tintColor: TVThemeColor.TVGray.Color).accessibilityIdentifier("closeDetailButton")
             }.frame(alignment: .topTrailing)
             HStack() {
                 VStack() {
@@ -58,10 +58,10 @@ struct MovieDetailView: View {
         }
         .padding(.all, 16)
             .frame(width: UIScreen.screenWidth * 1, height: UIScreen.screenHeight * 0.8, alignment: .topLeading)
-            .background(Color.white)
+            .background(TVThemeColor.TVWhite.Color)
             .opacity(0.99)
             .cornerRadius(24)
-            .shadow(color: Color.gray.opacity(0.6), radius: 24, x: 0.0, y: 0.0)
+            .shadow(color: TVThemeColor.TVGray.Color.opacity(0.6), radius: 24, x: 0.0, y: 0.0)
         .onChange(of: movieListViewModel.selectedMovie, perform: { movie in
             viewModel.updateSelectedMovie(with: movie)
         })

@@ -18,7 +18,7 @@ struct FormDetailView:View {
             VStack() {
                 Text(title)
                     .font(.system(size: 18, weight: .regular))
-                    .foregroundColor(.gray)
+                    .foregroundColor(TVThemeColor.TVGray.Color)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }.frame(width: widthSize).padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 8))
             VStack() {

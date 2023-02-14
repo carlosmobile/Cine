@@ -35,7 +35,7 @@ struct MultiImageItemView: View {
                 }
                 .frame(width: setWidthSizeToMultiImageCard() * 1, height: (setWidthSizeToMultiImageCard() * 1.6) - 32 )
             }
-            .foregroundColor(Color.clear)
+            .foregroundColor(.clear)
         }
         .frame(width: setWidthSizeToMultiImageCard(), height: setWidthSizeToMultiImageCard() * 1.6)
         .padding(.bottom, 0)
