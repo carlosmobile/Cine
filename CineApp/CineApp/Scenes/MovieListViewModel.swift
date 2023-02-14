@@ -10,9 +10,11 @@ import SwiftUI
 public class MovieListViewModel: ObservableObject {
     
     @Published var tags: [TagItem] = []
+    @Published var isShowMovieDetailView: Bool = false
     
     var movies: [Movie] = []
     let title = "Cine App"
+    var selectedMovie = Movie()
     
     init() {
         getDataModel()
@@ -42,5 +44,10 @@ public class MovieListViewModel: ObservableObject {
             }
         }
         return selectedTagTitle
+    }
+    
+    func showMovieDetailView(with movie: Movie) {
+        selectedMovie = movie
+        isShowMovieDetailView = true
     }
 }
