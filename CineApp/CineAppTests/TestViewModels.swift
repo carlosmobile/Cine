@@ -35,4 +35,22 @@ class TestViewModels: XCTestCase {
         XCTAssertEqual(groupedMoviesViewModel.movies.count > 0, true)
         XCTAssertEqual(groupedMoviesViewModel.groupMovies.count > 0, true)
     }
+    
+    func testMovieDetailViewModel() throws {
+        let movieDetailViewModel = MovieDetailViewModel()
+        
+        var movies: [Movie] = []
+        let data = DataManager()
+        movies = data.getAllMoviesFromShowsByGenre()
+        
+        let movie = movies.first ?? Movie()
+        
+        movieDetailViewModel.updateSelectedMovie(with: movie)
+
+        
+        XCTAssertEqual(movieDetailViewModel.directors.count > 0, true)
+        XCTAssertEqual(movieDetailViewModel.screenWriter.count > 0, true)
+        XCTAssertEqual(movieDetailViewModel.actors.count > 0, true)
+        XCTAssertEqual(movieDetailViewModel.countries.count > 0, true)
+    }
 }

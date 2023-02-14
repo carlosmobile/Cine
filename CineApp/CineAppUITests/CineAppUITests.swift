@@ -32,6 +32,10 @@ final class CineAppUITests: XCTestCase {
             moviesTag.tap()
             app.swipeDown()
             app.swipeUp()
+            app.buttons["imageButton"].firstMatch.tap()
+            app.swipeDown()
+            app.swipeUp()
+            app.buttons["closeDetailButton"].tap()
         }
 
     }

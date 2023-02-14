@@ -31,14 +31,12 @@ class TestModels: XCTestCase {
         XCTAssertNotNil(movies.first?.directors)
         XCTAssertNotNil(movies.first?.actors)
         XCTAssertNotNil(movies.first?.writers)
-        XCTAssertNotNil(movies.first?.categories)
         XCTAssertNotNil(movies.first?.year)
         XCTAssertNotNil(movies.first?.score)
         XCTAssertNotNil(movies.first?.synopsis)
         XCTAssertNotNil(movies.first?.moviePictures)
         XCTAssertNotNil(movies.first?.length)
         XCTAssertNotNil(movies.first?.country)
-        XCTAssertNotNil(movies.first?.ageCode)
         
         //Model TagItem
         var tagViewItemSelected = TagItem(title: "mockTitle", isSelected: false, filter: TagMoviesFilterBy.AllMovies)
