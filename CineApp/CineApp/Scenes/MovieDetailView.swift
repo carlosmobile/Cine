@@ -10,10 +10,12 @@ import Kingfisher
 
 struct MovieDetailView: View {
     
+    // MARK: - Properties
     @StateObject private var viewModel = MovieDetailViewModel()
     @EnvironmentObject var movieListViewModel: MovieListViewModel
     @State var close = false
     
+    // MARK: - View
     var body: some View {
         VStack(alignment: .leading) {
             HStack () {

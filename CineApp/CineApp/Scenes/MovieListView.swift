@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MovieListView: View {
     
+    // MARK: - Properties
     @StateObject private var viewModel = MovieListViewModel()
     private let standardMargin: CGFloat = 16
     private let tagType = TagType()
     
+    // MARK: - View
     var body: some View {
         ZStack() {
             VStack() {

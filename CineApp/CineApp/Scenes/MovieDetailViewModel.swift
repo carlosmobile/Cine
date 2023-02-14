@@ -9,18 +9,21 @@ import SwiftUI
 
 public class MovieDetailViewModel: ObservableObject {
     
+    // MARK: - Properties
     @Published var movie: Movie = Movie()
     var directors: String = ""
     var screenWriter: String = ""
     var actors: String = ""
     var countries: String = ""
     
+    // MARK: - Public methods
     func updateSelectedMovie(with movie: Movie) {
         resetFormatDetailData()
         formatDetailData(from: movie)
         self.movie = movie
     }
     
+    // MARK: - Private methods
     private func formatDetailData(from movie: Movie) {
         for director in movie.directors {
             directors = directors + director + ", "

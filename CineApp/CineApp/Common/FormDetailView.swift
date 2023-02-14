@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FormDetailView:View {
-        
+
+    // MARK: - Properties
     var title: String = ""
     var value: String = ""
     var widthSize: CGFloat = 80
 
+    // MARK: - View
     var body: some View {
         HStack() {
             VStack() {

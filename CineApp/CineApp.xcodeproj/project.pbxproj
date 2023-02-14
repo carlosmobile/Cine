@@ -153,6 +153,7 @@
 				0763A24B2999509000B4AF42 /* TagView.swift */,
 				0763A2502999524300B4AF42 /* MultiImageItemView.swift */,
 				07794F38299B02C600B4E87A /* CloseButtonView.swift */,
+				07794F40299B9E2900B4E87A /* FormDetailView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -198,12 +199,12 @@
 		07C165252997C50C002B399B /* CineApp */ = {
 			isa = PBXGroup;
 			children = (
-				0763A24F2999523700B4AF42 /* Common */,
 				07C165542997C805002B399B /* Scenes */,
+				0763A24F2999523700B4AF42 /* Common */,
 				07C1655B2997CADC002B399B /* Models */,
-				07C1655C2997CAE6002B399B /* Network */,
 				0763A23E29990E4200B4AF42 /* Extension */,
 				0763A24229990EB400B4AF42 /* Tools */,
+				07C1655C2997CAE6002B399B /* Network */,
 				07C165512997C797002B399B /* Support */,
 			);
 			path = CineApp;
@@ -260,7 +261,6 @@
 				0763A249299915D000B4AF42 /* MovieListViewModel.swift */,
 				07794F36299B025000B4E87A /* MovieDetailView.swift */,
 				07794F3E299B924300B4E87A /* MovieDetailViewModel.swift */,
-				07794F40299B9E2900B4E87A /* FormDetailView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

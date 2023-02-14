@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MoviesView: View {
     
+    // MARK: - Properties
     @EnvironmentObject var movieListViewModel: MovieListViewModel
-    
     private let standardMargin: CGFloat = 16
     private let gridColumns = GridColumns()
     
+    // MARK: - View
     var body: some View {
         VStack() {
             ScrollView {

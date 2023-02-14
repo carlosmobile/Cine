@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct TagView: View {
-    
+    // MARK: - Properties
     @EnvironmentObject var movieListViewModel: MovieListViewModel
     @State private var totalHeight = CGFloat.zero
-   
+    
+    let tagItemHeight: CGFloat = 30
+    let tagItemCornerRadius: CGFloat = 16
+    
+    // MARK: - View
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                self.generateContent(in: geometry)
+                self.generateAlignmentContent(in: geometry)
             }
         }
         .frame(height: totalHeight)
     }
     
-    private func generateContent(in g: GeometryProxy) -> some View {
+    // MARK: - Private methods
+    private func generateAlignmentContent(in g: GeometryProxy) -> some View {
         var width = CGFloat.zero
         var height = CGFloat.zero
         
@@ -73,8 +78,8 @@ struct TagView: View {
             .padding()
             .lineLimit(1)
             .background(isSelected ? TVThemeColor.TVGrayStrong.Color : TVThemeColor.TVWhite.Color)
-            .frame(height: 30)
-            .cornerRadius(16)
+            .frame(height: tagItemHeight)
+            .cornerRadius(tagItemCornerRadius)
             .overlay(Capsule().stroke(TVThemeColor.TVGrayStrong.Color, lineWidth: 1))
     }
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct CloseButtonView: View {
-    
+    // MARK: - Properties
     let tintColor: Color?
     let action: () -> ()
     
@@ -17,6 +17,7 @@ public struct CloseButtonView: View {
         self.tintColor = tintColor ?? TVThemeColor.TVBlack.Color
     }
     
+    // MARK: - View
     public var body: some View {
         Button(action: {
             self.action()
