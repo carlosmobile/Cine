@@ -14,24 +14,10 @@ struct MultiImageItemView: View {
     @State private var isChecked = false
             
     let fullItemCallback: () -> Void
-    let infoButtonCallback: () -> Void
     
     // MARK: - View
     var body: some View {
         ZStack() {
-            HStack() {
-                Button {
-                    infoButtonAction()
-                } label: {
-                    Image(systemName: isChecked ? "heart" : "heart.fill")
-                        .frame(alignment: .leading)
-                }
-                .frame(width: 24, height: 24)
-                .padding([.top, .leading], 8)
-                Spacer()
-            }
-            .frame(height: 32)
-            
             Button {
                 fullItemAction()
             } label: {
@@ -75,9 +61,5 @@ struct MultiImageItemView: View {
     
     func fullItemAction() {
         fullItemCallback()
-    }
-    
-    func infoButtonAction() {
-        infoButtonCallback()
     }
 }
