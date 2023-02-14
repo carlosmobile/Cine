@@ -24,6 +24,11 @@
 		0763A264299981BE00B4AF42 /* GroupedMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A263299981BE00B4AF42 /* GroupedMoviesViewModel.swift */; };
 		0763A26B299A649300B4AF42 /* TagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A26A299A649300B4AF42 /* TagItem.swift */; };
 		0763A26D299A88C100B4AF42 /* GridColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A26C299A88C100B4AF42 /* GridColumns.swift */; };
+		07794F37299B025000B4E87A /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794F36299B025000B4E87A /* MovieDetailView.swift */; };
+		07794F39299B02C600B4E87A /* CloseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794F38299B02C600B4E87A /* CloseButtonView.swift */; };
+		07794F3B299B2C6400B4E87A /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794F3A299B2C6400B4E87A /* AttributedText.swift */; };
+		07794F3F299B924300B4E87A /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794F3E299B924300B4E87A /* MovieDetailViewModel.swift */; };
+		07794F41299B9E2900B4E87A /* FormDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794F40299B9E2900B4E87A /* FormDetailView.swift */; };
 		07C165272997C50C002B399B /* CineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165262997C50C002B399B /* CineApp.swift */; };
 		07C165292997C50D002B399B /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C165282997C50D002B399B /* MovieListView.swift */; };
 		07C1652B2997C50E002B399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C1652A2997C50E002B399B /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 		0763A263299981BE00B4AF42 /* GroupedMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedMoviesViewModel.swift; sourceTree = "<group>"; };
 		0763A26A299A649300B4AF42 /* TagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItem.swift; sourceTree = "<group>"; };
 		0763A26C299A88C100B4AF42 /* GridColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColumns.swift; sourceTree = "<group>"; };
+		07794F36299B025000B4E87A /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		07794F38299B02C600B4E87A /* CloseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonView.swift; sourceTree = "<group>"; };
+		07794F3A299B2C6400B4E87A /* AttributedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		07794F3E299B924300B4E87A /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		07794F40299B9E2900B4E87A /* FormDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDetailView.swift; sourceTree = "<group>"; };
 		07C165232997C50C002B399B /* CineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C165262997C50C002B399B /* CineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineApp.swift; sourceTree = "<group>"; };
 		07C165282997C50D002B399B /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 		0763A24229990EB400B4AF42 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				07794F3A299B2C6400B4E87A /* AttributedText.swift */,
 				0763A26C299A88C100B4AF42 /* GridColumns.swift */,
 				0763A24329990EC100B4AF42 /* TargetDevice.swift */,
 			);
@@ -133,6 +144,7 @@
 			children = (
 				0763A24B2999509000B4AF42 /* TagView.swift */,
 				0763A2502999524300B4AF42 /* MultiImageItemView.swift */,
+				07794F38299B02C600B4E87A /* CloseButtonView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -236,6 +248,9 @@
 				0763A25A29997EA700B4AF42 /* Tags */,
 				07C165282997C50D002B399B /* MovieListView.swift */,
 				0763A249299915D000B4AF42 /* MovieListViewModel.swift */,
+				07794F36299B025000B4E87A /* MovieDetailView.swift */,
+				07794F3E299B924300B4E87A /* MovieDetailViewModel.swift */,
+				07794F40299B9E2900B4E87A /* FormDetailView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -401,13 +416,18 @@
 				0763A26B299A649300B4AF42 /* TagItem.swift in Sources */,
 				0763A24C2999509000B4AF42 /* TagView.swift in Sources */,
 				0763A262299981B400B4AF42 /* GroupedMoviesView.swift in Sources */,
+				07794F3F299B924300B4E87A /* MovieDetailViewModel.swift in Sources */,
 				0763A24429990EC100B4AF42 /* TargetDevice.swift in Sources */,
 				0763A26D299A88C100B4AF42 /* GridColumns.swift in Sources */,
 				0763A24129990E7600B4AF42 /* UIScreen.swift in Sources */,
+				07794F41299B9E2900B4E87A /* FormDetailView.swift in Sources */,
 				07C1655E2997CAF8002B399B /* DataManager.swift in Sources */,
 				0763A25C29997EE100B4AF42 /* TagType.swift in Sources */,
+				07794F39299B02C600B4E87A /* CloseButtonView.swift in Sources */,
 				0763A25E29997F1300B4AF42 /* MoviesView.swift in Sources */,
 				07C165602997CB0B002B399B /* Movie.swift in Sources */,
+				07794F37299B025000B4E87A /* MovieDetailView.swift in Sources */,
+				07794F3B299B2C6400B4E87A /* AttributedText.swift in Sources */,
 				0763A2462999113700B4AF42 /* ShowsByGenre.swift in Sources */,
 				0763A264299981BE00B4AF42 /* GroupedMoviesViewModel.swift in Sources */,
 				07C165682997CDAB002B399B /* AppDelegate.swift in Sources */,
@@ -451,6 +471,146 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		07794F32299AD1B400B4E87A /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TESTING;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Testing;
+		};
+		07794F33299AD1B400B4E87A /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CineApp/Support/CineApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CineApp/Support/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CineApp/Support/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Testing;
+		};
+		07794F34299AD1B400B4E87A /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CineApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CineApp";
+			};
+			name = Testing;
+		};
+		07794F35299AD1B400B4E87A /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revealdottedline.CineAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CineApp;
+			};
+			name = Testing;
+		};
 		07C165462997C50E002B399B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -731,6 +891,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07C165462997C50E002B399B /* Debug */,
+				07794F32299AD1B400B4E87A /* Testing */,
 				07C165472997C50E002B399B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -740,6 +901,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07C165492997C50E002B399B /* Debug */,
+				07794F33299AD1B400B4E87A /* Testing */,
 				07C1654A2997C50E002B399B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -749,6 +911,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07C1654C2997C50E002B399B /* Debug */,
+				07794F34299AD1B400B4E87A /* Testing */,
 				07C1654D2997C50E002B399B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -758,6 +921,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07C1654F2997C50E002B399B /* Debug */,
+				07794F35299AD1B400B4E87A /* Testing */,
 				07C165502997C50E002B399B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
