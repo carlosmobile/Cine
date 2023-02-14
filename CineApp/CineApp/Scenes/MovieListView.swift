@@ -14,19 +14,33 @@ struct MovieListView: View {
     private let tagType = TagType()
     
     var body: some View {
-        VStack() {
-            Text(viewModel.title).padding([.top, .bottom], standardMargin)
-            TagView().environmentObject(viewModel)
-                .frame(width: UIScreen.screenWidth - 16, alignment: .leading)
-                .padding(.bottom, 10)
-            tagType.getTagTypeView(tagType: viewModel.getSelectedTag(), viewModel: viewModel)
+        ZStack() {
+            VStack() {
+                Text(viewModel.title).padding([.top, .bottom], standardMargin)
+                TagView().environmentObject(viewModel)
+                    .frame(width: UIScreen.screenWidth - standardMargin, alignment: .leading)
+                    .padding(.bottom, 10)
+                tagType.getTagTypeView(tagType: viewModel.getSelectedTag(), viewModel: viewModel)
+            }
+            .padding(.top, 0)
+            ZStack {
+                VStack {
+                    HStack(alignment: .center, spacing: 0) {
+                        MovieDetailView().environmentObject(viewModel)
+                    }
+                }
+            }
+            .opacity(viewModel.isShowMovieDetailView ? 1.0 : 0.0)
+            .scaleEffect(viewModel.isShowMovieDetailView ? 1.0 : 0.0)
+            .animation(.easeInOut(duration: 0.4), value: viewModel.isShowMovieDetailView)
         }
-        .padding(.top, 0)
     }
 }
 
+#if !TESTING
 struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
         MovieListView()
     }
 }
+#endif

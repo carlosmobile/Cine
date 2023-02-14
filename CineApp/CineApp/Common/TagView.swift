@@ -43,7 +43,7 @@ struct TagView: View {
                         }
                         return result
                     })
-                    .alignmentGuide(.top, computeValue: {d in
+                    .alignmentGuide(.top, computeValue: { d in
                         let result = height
                         if movieListViewModel.tags[index].title == movieListViewModel.tags.last!.title {
                             height = 0 // last item

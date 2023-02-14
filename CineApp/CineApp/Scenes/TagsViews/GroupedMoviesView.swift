@@ -26,13 +26,9 @@ struct GroupedMoviesView: View {
                     let movies = viewModel.groupMovies[key]
                     LazyVGrid(columns: gridColumns.getFitDeviceNumberColumns(), spacing: 0) {
                         ForEach(movies!) { movie in
-                            MultiImageItemView(urlImage: movie.moviePictures["poster"] ?? "",
-                                           fullItemCallback: {
-                                //
-                            },
-                                           infoButtonCallback: {
-                                //
-                            })
+                            MultiImageItemView(urlImage: movie.moviePictures["poster"] ?? "", fullItemCallback: {
+                                movieListViewModel.showMovieDetailView(with: movie)
+                            }).accessibilityIdentifier("imageButton")
                         }
                     }
                 }
@@ -50,8 +46,10 @@ struct GroupedMoviesView: View {
     }
 }
 
+#if !TESTING
 struct GroupedMoviesView_Previews: PreviewProvider {
     static var previews: some View {
         MoviesView()
     }
 }
+#endif

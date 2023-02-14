@@ -19,13 +19,9 @@ struct MoviesView: View {
             ScrollView {
                 LazyVGrid(columns: gridColumns.getFitDeviceNumberColumns(), spacing: 0) {
                     ForEach(movieListViewModel.movies) { movie in
-                        MultiImageItemView(urlImage: movie.moviePictures["poster"] ?? "",
-                                       fullItemCallback: {
-                            //
-                        },
-                                       infoButtonCallback: {
-                            //
-                        })
+                        MultiImageItemView(urlImage: movie.moviePictures["poster"] ?? "", fullItemCallback: {
+                            movieListViewModel.showMovieDetailView(with: movie)
+                        }).accessibilityIdentifier("imageButton")
                     }
                 }
                 .frame(width: UIScreen.screenWidth - standardMargin, alignment: .leading)
@@ -35,8 +31,10 @@ struct MoviesView: View {
     }
 }
 
+#if !TESTING
 struct MoviesView_Previews: PreviewProvider {
     static var previews: some View {
         MoviesView()
     }
 }
+#endif
