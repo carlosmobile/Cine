@@ -5,10 +5,13 @@
 //  Created by Carlos on 11/2/23.
 //
 
-struct ShowsByGenre: Codable {
+struct ShowsByGenre {
     let totalCount: Int
     let genre: String
     let movies: [Movie]
+}
+
+extension ShowsByGenre: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
