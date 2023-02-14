@@ -17,6 +17,7 @@ struct MultiImageItemView: View {
     
     let topMargin: CGFloat = 16
     let bottomMargin: CGFloat = 16
+    var targetDevice = TargetDevice.currentDevice()
     
     // MARK: - View
     var body: some View {
@@ -46,8 +47,8 @@ struct MultiImageItemView: View {
         .padding(.bottom, 0)
     }
     
-    // MARK: - Private methods
-    private func setWidthSizeToMultiImageCard() -> CGFloat {
+    // MARK: - Public methods
+    func setWidthSizeToMultiImageCard() -> CGFloat {
         let lateralMargins: CGFloat = 32
         let insideEdgesiPhone: CGFloat = 16
         let insideEdgesiPad: CGFloat = 32
@@ -56,7 +57,7 @@ struct MultiImageItemView: View {
         var offset: CGFloat = 0
         var widthSize: CGFloat = 0
         
-        if TargetDevice.currentDevice() == .iPad {
+        if targetDevice == .iPad {
             offset = lateralMargins + insideEdgesiPad
             widthSize = (UIScreen.screenWidth - offset) / iPadColumns
         } else {

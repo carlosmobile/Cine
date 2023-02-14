@@ -14,4 +14,22 @@ class TestCommon: XCTestCase {
         let tagView = TagView()
         XCTAssertNotNil(tagView)
     }
+    
+    func testCloseButtonView() throws {
+        let closeButtonView = CloseButtonView(action: action, tintColor: nil)
+        XCTAssertNotNil(closeButtonView)
+    }
+    
+    func testMultiImageItemView() throws {
+        var multiImageItemView = MultiImageItemView(fullItemCallback: action)
+        multiImageItemView.targetDevice = .iPad
+        
+        XCTAssertNotNil(multiImageItemView)
+        XCTAssertEqual(multiImageItemView.targetDevice, .iPad)
+        XCTAssertEqual(multiImageItemView.setWidthSizeToMultiImageCard() > 0, true)
+    }
+    
+    func action() {
+        //mock button
+    }
 }

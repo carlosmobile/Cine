@@ -14,7 +14,7 @@ class TestModels: XCTestCase {
         
         //DataManager
         let dataManager = DataManager()
-        
+        dataManager.loadData()
         let showsByGenre = dataManager.showsByGenre
         let movies = dataManager.getAllMoviesFromShowsByGenre()
         
@@ -75,5 +75,16 @@ class TestModels: XCTestCase {
         XCTAssertEqual(spainRegionCountries.count > 0, true)
         XCTAssertEqual(australianRegionCountries.count > 0, true)
         
+    }
+    
+    func testDataManagerErrors() throws {
+        let dataManager = DataManager()
+        dataManager.jsonFileName = "error"
+        dataManager.jsonFileName = "json"
+        dataManager.error = "error"
+        
+        dataManager.loadData()
+        
+        XCTAssertEqual(dataManager.error, "json file not found")
     }
 }

@@ -28,8 +28,7 @@ struct CineApp: App {
                 print("The scene is in the foreground but should pause its work.")
             case .background:
                 print("The scene isn't currently visible in the UI.")
-            @unknown default:
-                break
+            @unknown default: break
             }
         }
     }

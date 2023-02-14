@@ -10,13 +10,11 @@ import SwiftUI
 
 public enum TVThemeColor: Int {
 
-    case `default`, TVWhite, TVBlack, TVGrayStrong, TVGray
+    case TVWhite, TVBlack, TVGrayStrong, TVGray
 
     //MARK: - Colors
     public var Color: Color {
         switch self {
-        case .default:
-            return .white
         case .TVWhite:
             return .white
         case .TVBlack:
@@ -28,19 +26,4 @@ public enum TVThemeColor: Int {
         }
     }
 
-}
-
-public enum TVThemeImage: String {
-
-    case `default`, tvDefaultNoImage
-
-    //MARK: - Images
-    public var TVImage: String {
-        switch self {
-        case .default:
-            return "default"
-        case .tvDefaultNoImage:
-            return "mkDefaultNoImage"
-        }
-    }
 }

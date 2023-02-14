@@ -153,19 +153,8 @@ internal class HTML2TextParser {
     }
 
     internal func parse() {
-        var tag: String? = nil
         let startIndex = htmlString.startIndex
         var endIndex = htmlString.startIndex
-
-        for index in htmlString.indices {
-            if tag != nil {
-                if htmlString[index].isLetter || htmlString[index].isHexDigit {
-                    tag?.append(htmlString[index])
-                } else {
-                    tag = nil
-                }
-            }
-        }
 
         endIndex = htmlString.endIndex
         if startIndex != endIndex {

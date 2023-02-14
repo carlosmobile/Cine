@@ -25,6 +25,7 @@ class TestViewModels: XCTestCase {
         
         var movies: [Movie] = []
         let data = DataManager()
+        data.loadData()
         movies = data.getAllMoviesFromShowsByGenre()
         
         groupedMoviesViewModel.movies = movies
@@ -41,6 +42,7 @@ class TestViewModels: XCTestCase {
         
         var movies: [Movie] = []
         let data = DataManager()
+        data.loadData()
         movies = data.getAllMoviesFromShowsByGenre()
         
         let movie = movies.first ?? Movie()

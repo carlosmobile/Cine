@@ -24,6 +24,7 @@ public class MovieListViewModel: ObservableObject {
     // MARK: - Private methods
     private func getDataModel() {
         let data = DataManager()
+        data.loadData()
         movies = data.getAllMoviesFromShowsByGenre()
     }
     
