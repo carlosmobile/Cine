@@ -9,19 +9,19 @@ import SwiftUI
 
 struct Constants {
     static let baseURL = "https://media.tvup.cloud"
+    static let imagePoster = "poster"
 }
 
 class DataManager: ObservableObject  {
     var showsByGenre = [ShowsByGenre]()
+    var jsonFileName = "last7d.cine"
+    var jsonFileExtension = "json"
+    var error = ""
     
-    init() {
-        loadData()
-    }
-    
-    private func loadData() {
-        guard let url = Bundle.main.url(forResource: "last7d.cine", withExtension: "json")
+    func loadData() {
+        guard let url = Bundle.main.url(forResource: jsonFileName, withExtension: jsonFileExtension)
             else {
-                print("json file not found")
+                error = "json file not found"
                 return
             }
         

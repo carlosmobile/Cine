@@ -12,8 +12,12 @@ struct MultiImageItemView: View {
     // MARK: - Properties
     @State var urlImage: String = ""
     @State private var isChecked = false
-            
+    
     let fullItemCallback: () -> Void
+    
+    let topMargin: CGFloat = 16
+    let bottomMargin: CGFloat = 16
+    var targetDevice = TargetDevice.currentDevice()
     
     // MARK: - View
     var body: some View {
@@ -31,35 +35,40 @@ struct MultiImageItemView: View {
                         .fade(duration: 0.25)
                         .resizable()
                         .memoryCacheExpiration(.expired)
-                        .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                        .padding([.top, .bottom], 0)
+                        .padding([.leading, .trailing], 4)
                 }
-                .frame(width: setWidthSizeToMultiImageCard() * 1, height: (setWidthSizeToMultiImageCard() * 1.6) - 32 )
+                .frame(width: setWidthSizeToMultiImageCard() * 1,
+                       height: (setWidthSizeToMultiImageCard() * 1.6) - (topMargin + bottomMargin))
             }
-            .foregroundColor(Color.clear)
+            .foregroundColor(.clear)
         }
         .frame(width: setWidthSizeToMultiImageCard(), height: setWidthSizeToMultiImageCard() * 1.6)
         .padding(.bottom, 0)
     }
     
+    // MARK: - Public methods
     func setWidthSizeToMultiImageCard() -> CGFloat {
         let lateralMargins: CGFloat = 32
         let insideEdgesiPhone: CGFloat = 16
         let insideEdgesiPad: CGFloat = 32
+        let iPadColumns: CGFloat = 5
+        let iPhoneColumns: CGFloat = 3
         var offset: CGFloat = 0
         var widthSize: CGFloat = 0
         
-        if TargetDevice.currentDevice() == .iPad {
+        if targetDevice == .iPad {
             offset = lateralMargins + insideEdgesiPad
-            widthSize = (UIScreen.screenWidth - offset) / 5
+            widthSize = (UIScreen.screenWidth - offset) / iPadColumns
         } else {
             offset = lateralMargins + insideEdgesiPhone
-            widthSize = (UIScreen.screenWidth - offset) / 3
+            widthSize = (UIScreen.screenWidth - offset) / iPhoneColumns
         }
         
         return widthSize
     }
     
-    func fullItemAction() {
+    private func fullItemAction() {
         fullItemCallback()
     }
 }

@@ -8,15 +8,16 @@
 import SwiftUI
 
 public struct CloseButtonView: View {
-    
+    // MARK: - Properties
     let tintColor: Color?
     let action: () -> ()
     
     public init(action: @escaping () -> Void, tintColor: Color?) {
         self.action = action
-        self.tintColor = tintColor ?? Color.green
+        self.tintColor = tintColor ?? TVThemeColor.TVBlack.Color
     }
     
+    // MARK: - View
     public var body: some View {
         Button(action: {
             self.action()

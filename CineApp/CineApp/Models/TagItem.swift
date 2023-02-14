@@ -12,18 +12,35 @@ struct TagItem: Equatable {
 }
 
 enum TagMoviesFilterBy: String, CaseIterable {
-    case AllMovies = "A-Z"
-    case European = "Europeo"
-    case EEUU = "Estados Unidos"
-    case American = "Americano"
-    case Asian = "Asiático"
-    case Spain = "Español"
-    case Australian = "Australiano"
+    case AllMovies
+    case European
+    case EEUU
+    case American
+    case Asian
+    case Spain
+    case Australian
 
     var title: String {
-        return self.rawValue
+        switch self {
+        case .AllMovies:
+            return "tagAZ".localized
+        case .European:
+            return "tagEuropean".localized
+        case .EEUU:
+            return "tagUSA".localized
+        case .American:
+            return "tagAmerican".localized
+        case .Asian:
+            return "tagAsian".localized
+        case .Spain:
+            return "tagSpanish".localized
+        case .Australian:
+            return "tagAustralian".localized
+        }
     }
     
+    
+    //TODO: hardcoded countries needs to arrive from api call
     func getRegionFromMoviesType() -> [String] {
         switch self {
         case .AllMovies:

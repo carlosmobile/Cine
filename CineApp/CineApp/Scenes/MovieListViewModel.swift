@@ -9,11 +9,11 @@ import SwiftUI
 
 public class MovieListViewModel: ObservableObject {
     
+    // MARK: - Properties
     @Published var tags: [TagItem] = []
     @Published var isShowMovieDetailView: Bool = false
-    
     var movies: [Movie] = []
-    let title = "Cine App"
+    let title = "cineApp".localized
     var selectedMovie = Movie()
     
     init() {
@@ -21,8 +21,10 @@ public class MovieListViewModel: ObservableObject {
         configureTags()
     }
     
+    // MARK: - Private methods
     private func getDataModel() {
         let data = DataManager()
+        data.loadData()
         movies = data.getAllMoviesFromShowsByGenre()
     }
     
@@ -36,6 +38,7 @@ public class MovieListViewModel: ObservableObject {
                 TagItem(title: TagMoviesFilterBy.Australian.title, isSelected: false, filter: .Australian)]
     }
     
+    // MARK: - Public methods
     func getSelectedTag() -> TagMoviesFilterBy {
         var selectedTagTitle: TagMoviesFilterBy = .AllMovies
         for tagItem in tags {

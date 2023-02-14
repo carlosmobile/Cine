@@ -9,19 +9,22 @@ import SwiftUI
 
 struct MoviesView: View {
     
+    // MARK: - Properties
     @EnvironmentObject var movieListViewModel: MovieListViewModel
-    
     private let standardMargin: CGFloat = 16
     private let gridColumns = GridColumns()
     
+    // MARK: - View
     var body: some View {
         VStack() {
             ScrollView {
                 LazyVGrid(columns: gridColumns.getFitDeviceNumberColumns(), spacing: 0) {
                     ForEach(movieListViewModel.movies) { movie in
-                        MultiImageItemView(urlImage: movie.moviePictures["poster"] ?? "", fullItemCallback: {
-                            movieListViewModel.showMovieDetailView(with: movie)
-                        }).accessibilityIdentifier("imageButton")
+                        if let poster = movie.moviePictures[Constants.imagePoster] {
+                            MultiImageItemView(urlImage: poster, fullItemCallback: {
+                                movieListViewModel.showMovieDetailView(with: movie)
+                            }).accessibilityIdentifier("imageButton")
+                        }
                     }
                 }
                 .frame(width: UIScreen.screenWidth - standardMargin, alignment: .leading)

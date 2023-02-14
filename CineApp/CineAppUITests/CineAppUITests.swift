@@ -9,22 +9,28 @@ import XCTest
 @testable import CineApp
 
 final class CineAppUITests: XCTestCase {
+    
+    var app: XCUIApplication!
+
+    override func setUp() {
+        app = XCUIApplication()
+        app.launchArguments = ["UITests"]
+        app.launch()
+    }
 
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
 
-    override func tearDownWithError() throws {
+    func testBackgroundState() throws {
+        XCUIDevice.shared.press(XCUIDevice.Button.home)
+        sleep(3)
+        app.launch()
     }
 
     func testUICineApp() throws {
-        let app = XCUIApplication()
-            app.launchArguments = ["UITests"]
-        
-        app.launch()
-        
         let timeout: Double = 2
-        
+
         for i in 0...(app.staticTexts.matching(identifier: "tagButton").count) {
             print("NUMERO DE TAG: \(i)")
             let moviesTag = app.staticTexts.element(boundBy: i)
@@ -37,6 +43,7 @@ final class CineAppUITests: XCTestCase {
             app.swipeUp()
             app.buttons["closeDetailButton"].tap()
         }
+        
 
     }
 
