@@ -13,7 +13,7 @@ public class MovieListViewModel: ObservableObject {
     @Published var isShowMovieDetailView: Bool = false
     
     var movies: [Movie] = []
-    let title = "Cine App"
+    let title = "cineApp".localized
     var selectedMovie = Movie()
     
     init() {

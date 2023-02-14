@@ -24,7 +24,7 @@ struct MovieDetailView: View {
             }.frame(alignment: .topTrailing)
             HStack() {
                 VStack() {
-                    KFImage.url(URL(string: Constants.baseURL + (viewModel.movie.moviePictures["poster"] ?? ""))!)
+                    KFImage.url(URL(string: Constants.baseURL + (viewModel.movie.moviePictures[Constants.imagePoster] ?? ""))!)
                         .placeholder {
                             ProgressView()
                                 .progressViewStyle(CircularProgressViewStyle(tint: .blue))
@@ -38,17 +38,17 @@ struct MovieDetailView: View {
                         .frame(width: UIScreen.screenWidth * 0.34, height: UIScreen.screenHeight * 0.185)
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 VStack(alignment: .leading) {
-                    FormDetailView(title: "Título", value: viewModel.movie.title)
-                    FormDetailView(title: "Año", value: String(viewModel.movie.year))
-                    FormDetailView(title: "Duración", value: String(viewModel.movie.length) + "min")
-                    FormDetailView(title: "País", value: String(viewModel.countries))
-                    FormDetailView(title: "Score", value: String(viewModel.movie.score) + " / 5")
+                    FormDetailView(title: "movieTitle".localized, value: viewModel.movie.title)
+                    FormDetailView(title: "movieYear".localized, value: String(viewModel.movie.year))
+                    FormDetailView(title: "movieLenght".localized, value: String(viewModel.movie.length) + "min")
+                    FormDetailView(title: "movieCountry".localized, value: String(viewModel.countries))
+                    FormDetailView(title: "movieScore".localized, value: String(viewModel.movie.score) + " / 5")
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             VStack(alignment: .leading) {
-                FormDetailView(title: "Dirección", value: viewModel.directors, widthSize: 90)
-                FormDetailView(title: "Guión", value: viewModel.screenWriter, widthSize: 90)
-                FormDetailView(title: "Reparto", value: viewModel.actors, widthSize: 90)
+                FormDetailView(title: "movieDirector".localized, value: viewModel.directors, widthSize: 90)
+                FormDetailView(title: "movieWriter".localized, value: viewModel.screenWriter, widthSize: 90)
+                FormDetailView(title: "movieActors".localized, value: viewModel.actors, widthSize: 90)
             }.padding(EdgeInsets(top: 10, leading: 0, bottom: 5, trailing: 16))
             ScrollView() {
                 VStack() {

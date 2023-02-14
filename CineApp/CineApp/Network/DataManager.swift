@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Constants {
     static let baseURL = "https://media.tvup.cloud"
+    static let imagePoster = "poster"
 }
 
 class DataManager: ObservableObject  {
