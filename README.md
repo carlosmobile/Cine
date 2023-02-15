@@ -32,15 +32,14 @@ The second screen will display more detailed information about a movie. Showing 
   
 Example gifs with iPhone 14 Xcode simulator:
 
-<img src="readme_images/iphone1.gif"  alt="Keys" width = 246px height = 500px >    <img src="readme_images/iphone2.gif"  alt="Movie" width = 246px height = 500px >    <img src="Readme_Images/iphone3.gif"  alt="Movie detail" width = 246px height = 500px >
+<img src="readme_images/iphone_scroll.gif"  alt="cine" width = 250 height = 542px >    <img src="readme_images/iphone_tags.gif"  alt="cine" width = 250 height = 542px > 
 
-<img src="readme_images/iphone4.gif"  alt="Keys" width = 246px height = 500px >    <img src="readme_images/iphone5.gif"  alt="Movie" width = 246px height = 500px >    <img src="readme_images/iphone6.gif"  alt="Movie detail" width = 251px height = 500px >
+<img src="readme_images/iphone_search.gif"  alt="cine" width = 250 height = 542px >    <img src="readme_images/iphone_detail.gif"  alt="cine" width = 250 height = 542px > 
 
-<img src="readme_images/iphone7.gif"  alt="Keys" width = 251 height = 500px >    <img src="readme_images/iphone8.gif"  alt="Movie" width = 251 height = 500px > 
 <br><br>
 Example gif with iPad Pro (11 inch) Xcode simulator:
  
- <img src="readme_images/ipad.gif"  alt="General" width = 443 height = 600px > 
+ <img src="readme_images/ipad_scroll.gif"  alt="cine" width = 440 height = 630px >    <img src="readme_images/ipad_tags.gif"  alt="cine" width = 440 height = 630px > 
  
 <br><br> 
 
@@ -110,7 +109,7 @@ This app test ViewModels, Models, Tools, Common, etc.. with [XCTests](https://gi
 Test Coverage 100%
 
 <p align="left">
-  <img src="readme_images/coverage.png" width="620" height="639"/>
+  <img src="readme_images/coverage.png" width="600" height="618"/>
 </p>
 
 <br><br>
@@ -145,4 +144,3 @@ Running in Xcode 14.2 and iOS 16.3 Written in Swift 5
 
 Add network layer with real API service, add favourites, persistence of data, etc..
 <br><br>
-
