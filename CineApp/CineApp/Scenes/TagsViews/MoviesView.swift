@@ -24,6 +24,8 @@ struct MoviesView: View {
     private let searchTextfieldHeight: CGFloat =  40.0
     private let searchTextfieldCornerRadius: CGFloat =  12.0
     
+    @FocusState var isFocused : Bool
+    
     // MARK: - View
     var body: some View {
         VStack() {
@@ -41,11 +43,14 @@ struct MoviesView: View {
                         .foregroundColor(TVThemeColor.TVGray.Color)
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 8))
                 }
+                .keyboardType(.alphabet)
                 .autocapitalization(.none)
+                .focused($isFocused)
                 .background(Color(.clear))
                 .overlay(RoundedRectangle(cornerRadius: searchTextfieldCornerRadius, style: .continuous)
                     .stroke(StatusColorView(state: $focusStatus).render, lineWidth: 1))
                 .padding([.trailing, .leading], 16)
+                .accessibilityIdentifier("searchTextField")
             }
             
             TVCustomScrollView(scrollOffset: $scrollOffset,
@@ -54,6 +59,7 @@ struct MoviesView: View {
                     ForEach(viewModel.movies) { movie in
                         if let poster = movie.moviePictures[Constants.imagePoster] {
                             MultiImageItemView(urlImage: poster, fullItemCallback: {
+                                isFocused = false
                                 movieListViewModel.showMovieDetailView(with: movie)
                             }).accessibilityIdentifier("imageButton")
                         }
