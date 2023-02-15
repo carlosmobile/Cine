@@ -12,7 +12,7 @@ public struct CloseButtonView: View {
     let tintColor: Color?
     let action: () -> ()
     
-    public init(action: @escaping () -> Void, tintColor: Color?) {
+    init(action: @escaping () -> Void, tintColor: Color?) {
         self.action = action
         self.tintColor = tintColor ?? TVThemeColor.TVBlack.Color
     }

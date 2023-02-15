@@ -11,7 +11,7 @@ struct GroupedMoviesView: View {
     
     // MARK: - Properties
     @StateObject private var viewModel = GroupedMoviesViewModel()
-    @EnvironmentObject var movieListViewModel: MovieListViewModel
+    @EnvironmentObject private var movieListViewModel: MovieListViewModel
     private let standardMargin: CGFloat = 16
     private let gridColumns = GridColumns()
     

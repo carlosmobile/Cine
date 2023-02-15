@@ -12,8 +12,8 @@ struct MovieDetailView: View {
     
     // MARK: - Properties
     @StateObject private var viewModel = MovieDetailViewModel()
-    @EnvironmentObject var movieListViewModel: MovieListViewModel
-    @State var close = false
+    @EnvironmentObject private var movieListViewModel: MovieListViewModel
+    @State private var close = false
     
     // MARK: - View
     var body: some View {
