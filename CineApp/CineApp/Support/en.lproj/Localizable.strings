@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  CineApp
+
+  Created by Carlos on 14/2/23.
+  
+*/
+
+"cineApp" = "Cinema App";
+"tagAZ" = "A-Z";
+"tagEuropean" = "European";
+"tagUSA" = "United States";
+"tagAmerican" = "American";
+"tagAsian" = "Asian";
+"tagSpanish" = "Spanish";
+"tagAustralian" = "Australian";
+"movieTitle" = "Title";
+"movieYear" = "Year";
+"movieLenght" = "Length";
+"movieCountry" = "Country";
+"movieScore" = "Score";
+"movieDirector" = "Director";
+"movieWriter" = "Writer";
+"movieActors" = "Actors";
+"searchPlaceHolder" = "Search movies by title or director";
