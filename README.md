@@ -51,7 +51,7 @@ This project supports UIKit and SwiftUI views. In case that we need to solve som
 MVVM is a "reactive" architecture. Its a perfect fit to use SwiftUI with Combine. The view reacts to changes on the view model, and the view model updates its state based on data from the model.
 
 <p align="left">
-  <img src="readme_images/coverage.png" width="700" height="382"/>
+  <img src="readme_images/basic-mvvm.png" width="700" height="382"/>
 </p>
 
 MVVM involves three layers:
