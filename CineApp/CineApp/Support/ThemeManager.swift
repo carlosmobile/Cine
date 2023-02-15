@@ -25,5 +25,4 @@ public enum TVThemeColor: Int {
             return .gray
         }
     }
-
 }

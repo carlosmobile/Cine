@@ -50,5 +50,6 @@ public class MovieDetailViewModel: ObservableObject {
         directors = ""
         screenWriter = ""
         actors = ""
+        countries = ""
     }
 }

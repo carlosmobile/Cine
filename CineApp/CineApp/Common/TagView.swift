@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TagView: View {
     // MARK: - Properties
-    @EnvironmentObject var movieListViewModel: MovieListViewModel
+    @EnvironmentObject private var movieListViewModel: MovieListViewModel
     @State private var totalHeight = CGFloat.zero
     
     let tagItemHeight: CGFloat = 30

@@ -56,4 +56,22 @@ class TestTools: XCTestCase {
         XCTAssertNotNil(tagType.getTagTypeView(tagType: TagMoviesFilterBy.AllMovies, viewModel: MovieListViewModel()))
         XCTAssertNotNil(tagType.getTagTypeView(tagType: TagMoviesFilterBy.European, viewModel: MovieListViewModel()))
     }
+    
+    func testThemeManager() throws {
+        
+        let colorBlack = TVThemeColor.TVBlack.Color
+        let colorGray = TVThemeColor.TVGray.Color
+        let colorWhite = TVThemeColor.TVWhite.Color
+        
+        XCTAssertEqual(colorBlack, .black)
+        XCTAssertEqual(colorGray, .gray)
+        XCTAssertEqual(colorWhite, .white)
+    }
+    
+    func testAttributedText() throws {
+        let text = "test &aacute;test<BR/><BR/>"
+        let textAttributed = AttributedText(text)
+        
+        XCTAssertNotNil(textAttributed)
+    }
 }

@@ -39,7 +39,6 @@ enum TagMoviesFilterBy: String, CaseIterable {
         }
     }
     
-    
     //TODO: hardcoded countries needs to arrive from api call
     func getRegionFromMoviesType() -> [String] {
         switch self {

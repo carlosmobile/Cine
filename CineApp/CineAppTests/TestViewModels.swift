@@ -20,6 +20,22 @@ class TestViewModels: XCTestCase {
         XCTAssertNotNil(title)
     }
     
+    func testMoviesViewModel() throws {
+        let moviesViewModel = MoviesViewModel()
+        
+        let data = DataManager()
+        data.loadData()
+        
+        moviesViewModel.movies = data.getAllMoviesFromShowsByGenre()
+        moviesViewModel.originMovies = moviesViewModel.movies
+        moviesViewModel.textField = "a"
+        moviesViewModel.filterMovies()
+        
+        XCTAssertEqual(moviesViewModel.movies.count > 0, true)
+        XCTAssertEqual(moviesViewModel.originMovies.count > 0, true)
+        XCTAssertNotNil(moviesViewModel.movies)
+    }
+    
     func testGroupedMoviesViewModel() throws {
         let groupedMoviesViewModel = GroupedMoviesViewModel()
         
@@ -49,7 +65,6 @@ class TestViewModels: XCTestCase {
         
         movieDetailViewModel.updateSelectedMovie(with: movie)
 
-        
         XCTAssertEqual(movieDetailViewModel.directors.count > 0, true)
         XCTAssertEqual(movieDetailViewModel.screenWriter.count > 0, true)
         XCTAssertEqual(movieDetailViewModel.actors.count > 0, true)

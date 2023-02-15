@@ -22,3 +22,4 @@
 "movieDirector" = "Director";
 "movieWriter" = "Writer";
 "movieActors" = "Actors";
+"searchPlaceHolder" = "Search movies by title or director";
