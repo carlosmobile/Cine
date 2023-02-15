@@ -29,6 +29,11 @@ class TestCommon: XCTestCase {
         XCTAssertEqual(multiImageItemView.setWidthSizeToMultiImageCard() > 0, true)
     }
     
+    func testFormDetailView() throws {
+        let formDetailView = FormDetailView()
+        XCTAssertNotNil(formDetailView)
+    }
+    
     func action() {
         //mock button
     }

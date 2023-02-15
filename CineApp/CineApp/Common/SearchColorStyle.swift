@@ -10,7 +10,6 @@ import SwiftUI
 enum SearchColorStyle {
     case active
     case disabled
-    case error
 }
 
 struct StatusColorView {
@@ -25,8 +24,6 @@ struct StatusColorView {
             return TVThemeColor.TVGrayStrong.Color
         case .disabled:
             return TVThemeColor.TVGray.Color
-        case .error:
-            return TVThemeColor.TVBlack.Color
         }
     }
 }

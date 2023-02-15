@@ -42,9 +42,13 @@ final class CineAppUITests: XCTestCase {
             app.swipeDown()
             app.swipeUp()
             app.buttons["closeDetailButton"].tap()
+            
+            if i == 1 {
+                let searchTextField = app.textFields["searchTextField"]
+                searchTextField.tap()
+                searchTextField.typeText("almo")
+            }
         }
-        
-
     }
 
     func testLaunchPerformance() throws {
